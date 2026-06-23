@@ -136,15 +136,15 @@
         <div class="container">
             <p>Bem-vindo à nossa ferramenta de Orçamento Automático.
 
-Para atender áreas de até 20m² com a agilidade que você precisa, desenvolvemos o protocolo "Especialista em Pequenas Metragens".
+Calcule agora o investimento para o seu projeto de piso. Mão de obra qualificada, materiais de primeira linha e entrega ágil — do tamanho que você precisar.
 
-O cálculo abaixo reflete o investimento necessário para projetos dessa escala. Não tema o valor: ele é focado em quem não abre mão de qualidade e rapidez. Se o orçamento fizer sentido para você, clique no botão ao final para falar conosco. </p>
-            <h1>ESPECIALISTAS <span>EM PEQUENAS METRAGENS</span></h1>
+Preencha os campos abaixo e receba sua estimativa instantânea. Se fizer sentido, clique no botão para falar com a gente. </p>
+            <h1>ORÇAMENTO <span>ONLINE INSTANTÂNEO</span></h1>
             
             <div class="calculator-box">
                 <div class="form-group">
-                    <label>Metragem (Permitido 10 a 20 m²)</label>
-                    <input type="number" id="metragem" min="10" max="20" placeholder="Ex: 15">
+                    <label>Metragem (m²)</label>
+                    <input type="number" id="metragem" min="1" placeholder="Ex: 30">
                 </div>
 
                 <div class="form-group">
@@ -221,8 +221,8 @@ O cálculo abaixo reflete o investimento necessário para projetos dessa escala.
             const modeloTexto = selectPiso.options[selectPiso.selectedIndex].text.split('(')[0];
             const temRodape = document.getElementById('rodape').checked;
             
-            if (isNaN(m2) || m2 < 10 || m2 > 20) {
-                alert("Esta ferramenta é exclusiva para áreas entre 10m² e 20m².");
+            if (isNaN(m2) || m2 <= 0) {
+                alert("Por favor, informe uma metragem válida.");
                 return;
             }
 
